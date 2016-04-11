@@ -17,7 +17,7 @@
 	 <script src="/lab5/Leaflet.Instagram.js"></script> 
 	 <script> 
 	 var at = '3104445795.a7983ff.fa6db12d3f1444aba184ec639b414cbf'; 
-	 var url = "https://api.instagram.com/v1/media/search?lat=39.961789&lng=-75.164047&access_token="+at;
+	 var url = "https://api.instagram.com/v1/media/search?lat=-75.164047&lng=39.961789&access_token="+at;
 	 
 		 
 
@@ -35,9 +35,9 @@
 	;
 	
 	var map = L.map('map', {
-	    center: [59.913923, 10.729493],
-	    zoom: 8,
-	    layers: [Thunderforest_SpinalMap]
+	    center: [-75.164047, 39.961789],
+	    zoom: 14,
+	    layers: [streets]
 	});
 	
 	var baseMaps = {
