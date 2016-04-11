@@ -2,7 +2,7 @@
 <head>  
 <title>Lab 5</title>  
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>  
-<link rel="stylesheet" href="Leaflet.Instagram/dist/Leaflet.Instagram.css"/>  
+<link rel="stylesheet" href="https://Leaflet.Instagram/dist/Leaflet.Instagram.css"/>  
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>  
 <style>   
 #map{ height: 100% }  
@@ -23,10 +23,6 @@
 
 	var streets = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
-	}),
-	   Thunderforest_SpinalMap = L.tileLayer('http://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-	maxZoom: 11
 	}), stamen = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
 		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 		subdomains: 'abcd',
@@ -42,7 +38,6 @@
 	
 	var baseMaps = {
 	    "Streets": streets,
-	    "Metal": Thunderforest_SpinalMap,
 	    "Stamen" : stamen
 	};
 	
