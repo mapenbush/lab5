@@ -16,7 +16,6 @@
 	 <script src="https://gus8068Spr16.github.io/reqwest.min.js"></script> 
 	 <script src="https://gus8068Spr16.github.io/Leaflet.Instagram/dist/Leaflet.Instagram.js"></script> 
 	 <script> 
-	 var map = L.map('map').setView([42.2917, -85.5872], 16); 
 	 var at = '3104445795.a7983ff.fa6db12d3f1444aba184ec639b414cbf'; 
 	 var url = "https://api.instagram.com/v1/media/search?lat=42.2917&lng=-85.5872&access_token="+at;
 	 
@@ -35,8 +34,8 @@
 	;
 	
 	var map = L.map('map', {
-	    center: [35.331086, -83.368441],
-	    zoom: 6,
+	    center: [42.2917, -85.5872],
+	    zoom: 16,
 	    layers: [streets]
 	});
 	
