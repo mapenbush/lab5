@@ -28,6 +28,9 @@
 	}), Thunderforest_TransportDark = L.tileLayer('http://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 	maxZoom: 19
+	}),
+	Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 	})
 	;
 	
@@ -40,7 +43,8 @@
 	var baseMaps = {
 	    "Stamen" : stamen,
 	    "Dark" : Thunderforest_TransportDark,
-	    "Streets": streets
+	    "Streets": streets,
+	    "Imagery" : Esri_WorldImagery
 	};
 	
 
