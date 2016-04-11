@@ -20,11 +20,34 @@
 	 var at = '3104445795.a7983ff.fa6db12d3f1444aba184ec639b414cbf'; 
 	 var url = "https://api.instagram.com/v1/media/search?lat=42.2917&lng=-85.5872&access_token="+at;
 	 
-	 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
-		 {   
-		 attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',   
-		 maxZoom: 19,   
-		 minZoom: 7 }).addTo(map); 
+		 
+
+	var streets = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+	}),
+	    topographic   = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service'
+	}), stamen = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
+		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		subdomains: 'abcd',
+		ext: 'png'
+	})
+	;
+	
+	var map = L.map('map', {
+	    center: [35.331086, -83.368441],
+	    zoom: 6,
+	    layers: [streets]
+	});
+	
+	var baseMaps = {
+	    "Streets": streets,
+	    "Topographic": topographic,
+	    "Stamen" : stamen
+	};
+	
+
+	L.control.layers(baseMaps).addTo(map);
 	 
 	 L.instagram(url).addTo(map); 
 	 </script>
